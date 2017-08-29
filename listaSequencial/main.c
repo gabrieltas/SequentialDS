@@ -1,11 +1,3 @@
-/***********************************************/
-/* Lista Sequencial                            */
-/* objetivo: controle de registros             */
-/* programador: Daniela Bagatini               */
-/* criado em: 20/08/2017                       */
-/* data da �ltima altera��o: 22/08/2017        */
-/***********************************************/
-
 #include <stdio.h>
 //#include <conio.h>  // getche
 #include <stdlib.h> // exit
@@ -454,12 +446,24 @@ void altera_nodo( LISTASEQ *lista )
         printf("\n Lista vazia!");
     } else {
         int cod;
+        int pf;
         
         printf("\n Informe o codigo do nodo a ser alterado: ");
         fflush( stdin );
         scanf("%d", &cod);
         
-        if()
+        pf = procura_nodo(cod, *lista);
+        
+        if((pf >= 0) && (pf < lista->f) && (lista->info[pf].codigo == cod)) {
+            NODO changedElement;
+            entrada_dados(&changedElement);
+            
+            lista->info[pf] = changedElement;
+            
+            printf("\n Registro alterado com sucesso!");
+        } else {
+            printf("\n Registro nao encontrado. Tente novamente.");
+        }
     }
 }
 
