@@ -493,7 +493,7 @@ void busca_binaria( LISTASEQ lista )
     if( lista.f == 0 ) // verifica se a lista est� vazia
         printf( "\n Lista vazia!" );
     else {
-        //ordena_lista(lista);    // ordena toda lista para garantir que ir� incluir o novo registro em ordem
+        ordena_lista(&lista);    // ordena toda lista para garantir que ir� incluir o novo registro em ordem
         int cod, meio, inicio= 0, fim= lista.f-1; // iniciliza inicio e fim
         printf( "\n C�digo de refer�ncia: " );
         fflush( stdin );
@@ -523,5 +523,5 @@ void busca_binaria( LISTASEQ lista )
  ************************************************/
 void exclui_repetidos ( LISTASEQ *lista )
 {
-    printf("\n Implementar!");
+    
 }
